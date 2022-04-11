@@ -1,11 +1,22 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from "./components/HelloWorld.vue";
+import Menu from "./components/Menu.vue"
+import Sidebar from "./components/Sidebar.vue"
+import Canvas from "./components/Canvas.vue"
+import Palette from "./components/Palette.vue"
+import Footer from "./components/Footer.vue"
 </script>
 
 <template>
-  <h1 className="text-xl text-red-500">Hello World</h1>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+	<div class="flex flex-col justify-between h-screen">
+		<Menu />
+		<main class="flex flex-grow-1 h-full">
+			<Sidebar />
+			<Canvas />
+		</main>
+		<footer class="flex flex-col">
+			<Palette />
+			<Footer />
+		</footer>
+	</div>
 </template>
 
